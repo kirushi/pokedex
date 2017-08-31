@@ -1,0 +1,55 @@
+.pokemonListContainer {
+    background-color: transparent;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    position: relative;
+}
+
+.pokemonList {
+    z-index: 500;
+    height: 100vh;
+    list-style-type: none;
+    padding: 60px 0 0 0;
+    margin: 0;
+    overflow-y: scroll;
+    li {
+        display: block;
+        padding: 10px 15px;
+        display: block;
+        width: 100%;
+        &.active {
+            background-color: rgba(255,255,255, 1);
+        }
+        &:hover, &:focus {
+            text-decoration: none;
+            cursor: pointer;
+            background-color: rgba(255,255,255, 1);
+        }
+    }
+    &__title {
+        text-transform: uppercase;
+        vertical-align: middle;
+        color: #5b5b5b;
+        font-size: 14px;
+    }
+    &__search {
+        z-index: 1000;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        input {
+            background-color: #4d576e;
+            color: white;
+            width: 100%;
+            padding: 20px;
+            border: 0px;
+            &:focus {
+                outline: 0;
+            }
+        }
+        &:hover, &:focus {
+            background-color: transparent !important;
+        }
+    }
+}
